@@ -1,0 +1,48 @@
+/**
+* This file is to be used alongside the publisher and subcriber
+* inluded in OpenSplice-UnionExample to give a brief illustration
+* on how to use an IDL Union with OpenSplice.
+*/
+
+module HelloWorldData
+{
+	enum Message_Type
+	{
+		SYSTEM_INFO_MESSAGE,
+		SYSTEM_ERROR_MESSAGE,
+		BUS_MESSAGE
+	};
+
+	struct System_Info_Type
+	{
+		string	process;
+		long	thread;
+		string	desc;
+	};
+
+	struct System_Error_Type
+	{
+		long	errorCode;
+	};
+
+	struct Bus_Message_Type
+	{
+		long busId;
+		long length;
+		long data;
+	};
+
+	union Server_Message_Type switch (Message_Type)
+	{
+		case SYSTEM_INFO_MESSAGE: System_Info_Type msg1;
+		case SYSTEM_ERROR_MESSAGE: System_Error_Type msg2;
+		case BUS_MESSAGE: Bus_Message_Type msg3;
+	};
+
+	struct Msg
+	{
+		long msgID;
+		Server_Message_Type msg;
+	};
+	#pragma keylist Msg msgID
+};
