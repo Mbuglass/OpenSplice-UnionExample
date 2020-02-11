@@ -1,6 +1,6 @@
 /**
-* This file is to be used alongside the publisher and subcriber
-* inluded in OpenSplice-UnionExample to give a brief illustration
+* This file is to be used alongside the publisher and subscriber
+* included in OpenSplice-UnionExample to give a brief illustration
 * on how to use an IDL Union with OpenSplice.
 */
 
