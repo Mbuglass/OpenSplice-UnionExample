@@ -1,7 +1,14 @@
 # OpenSplice Union Example
 
-This repository contains a modified version of the OpenSplice HelloWorld example, adapted to make use of an IDL Union to demonstrate how to assign values to a union as well as send/recieve this data.
-Currently, this repository contains only an example for C++ but may be updated to contain more languages in future. This is not an official example, and is meant only to provide some guidance for those interested in getting started with unions in OpenSplice.
+This repository contains a modified version of the OpenSplice HelloWorld example, adapted to make use of an IDL Union to demonstrate how to assign values to a union as well as send/receive this data.
+Examples for the following languages are included:
+
+ - C++
+ - Java
+
+More languages may be added in the future. Implementations in each language may differ depending on the functionality of language and the way in which unions are mapped within the language. This is not an official example and will not implement the best/most-efficient practice.
+
+*Note: The included examples have not been tested for language-independent operation and have only been tested against the publisher/subscriber of the matching language.*
 
 ## Description
 
@@ -29,11 +36,13 @@ Recompile the publisher and subscriber, then attempt to run the example as norma
 
 ### Compiling
 
-#### Windows
+#### CPP
+
+##### Windows
 
 To build all examples (if you haven't done so before), you can use the All_C_and_CPlusPlus.sln in the \examples\ directory. However, if you wish to rebuild just the HelloWorld example, use the vcxproj files in the \examples\dcps\HelloWorld\cpp\standalone directory.
 *Note: If you use All_C_and_CPlusPlus.sln you may get errors for the HelloWorld example in other languages* 
 
-#### Linux
+##### Linux
 
 If attempting to compile this example on Linux, it may be best to do so using the ospllauncher. An issue with the Makefiles could result in build errors when attempting to compile this example. From the examples section in the launcher, select the HelloWorld example with cpp as the language. Click the build button (Looks like a down arrow). Once this is done, click the run button and the example should run.
